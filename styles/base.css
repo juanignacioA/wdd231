@@ -1,0 +1,140 @@
+:root {
+    --primary-blue: #4a7c9d; 
+    --primary-blue-dark: #3a637e;
+    --accent-gray: #f4f4f9;
+    --text-color: #333333;
+    --body-font: 'Inter', sans-serif;
+    --heading-font: 'Montserrat', sans-serif;
+    --spacing: 1rem;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    font-family: var(--body-font);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+main {
+    flex-grow: 1; 
+    padding: var(--spacing);
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing);
+    background-color: var(--primary-blue);
+    color: white;
+    position: relative;
+}
+
+.logo-area {
+    display: flex;        
+    align-items: center;  
+    gap: 0.5rem;         
+}
+
+.logo-area img {
+    width: 40px;          
+    height: auto;      
+    display: block;      
+}
+
+.logo-text {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+}
+
+
+nav {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-blue-dark);
+    z-index: 10;
+}
+
+
+nav.open {
+    display: flex; 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: 1px dotted rgba(255,255,255,0.2);
+}
+
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.hamburger-btn::before {
+    display: inline-block;
+    content: "\2630";
+    font-size: 2rem;
+    width: 2rem;
+    text-align: center;
+}
+
+.hamburger-btn.open::before {
+    content: "\00D7"; 
+}
+
+footer {
+    padding: 1.5rem;
+    background-color: var(--primary-blue);
+    color: white;
+    text-align: center;
+    font-size: 0.85rem; 
+    border-top: 3px solid var(--primary-blue-dark);
+}
+
+footer p {
+    margin: 0.5rem 0; 
+}
+
+#lastModified {
+    /*color: #ffd700;*/ 
+    font-family: var(--body-font);
+}
+
+/* DESKTOP ADAPTATION (Media Query) */
+@media (min-width: 768px) {
+    .hamburger-btn {
+        display: none; 
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    nav a {
+        border-bottom: none;
+    }
+}
