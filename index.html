@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Juan Ignacio Arballo">
+    <meta name="description" content="WDD 231 Course Portal for Juan Ignacio Arballo. A hub for web development assignments, certificate progress, and software development projects.">
 
     <meta property="og:title" content="Juan Ignacio Arballo - WDD 231 Web Portal">
     <meta property="og:description" content="Assignment portal for WDD 231: Web Frontend Development. Check out my latest projects and coding progress.">
@@ -31,14 +33,22 @@
             <a href="index.html">Home</a>
             <a href="#">Chamber</a>
             <a href="#">Final</a>
+            <a href="https://github.com/juanignacioA/wdd231">Github</a>
         </nav>
 
         <button id="nav-button" class="hamburger-btn" aria-label="Toggle navigation"></button>
     </header>
-
     <main>
-        <h1>Project Title</h1>
-        <p>This is the main content</p>
+        <section class="course-work">
+            <h2>Course Work</h2>
+            <div class="filters">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+            <div id="course-list"></div>
+            <p id="total-credits"></p>
+        </section>
     </main>
 
     <footer>

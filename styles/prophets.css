@@ -1,0 +1,95 @@
+:root {
+    --primary-blue: #4a7c9d; 
+    --primary-blue-dark: #3a637e;
+    --accent-gray: #f4f4f9;
+    --text-color: #333333;
+    --body-font: 'Inter', sans-serif;
+    --heading-font: 'Montserrat', sans-serif;
+    --spacing: 1rem;
+    --card-bg: #ffffff;
+    --border-color: #ced4da;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* --- BASE STYLES --- */
+body {
+    font-family: var(--body-font);
+    background-color: var(--accent-gray);
+    color: var(--text-color);
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--primary-blue-dark);
+}
+
+header h1 {
+    font-family: var(--heading-font);
+}
+
+/* --- DIRECTORY GRID --- */
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing);
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- CARD STYLING --- */
+section {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    border-color: var(--primary-blue);
+}
+
+section h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-blue-dark);
+    margin-bottom: 1rem;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+    border-radius: 4px;
+    filter: drop-shadow(0 4px 4px var(--shadow));
+    border: 2px solid var(--accent-gray);
+}
+
+/* --- FOOTER STYLES --- */
+footer {
+    background-color: var(--primary-blue);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 4px solid var(--primary-blue-dark);
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    #cards {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
