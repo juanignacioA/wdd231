@@ -96,11 +96,11 @@ function displayCourses(filteredList) {
     courseList.innerHTML = "";
     
     filteredList.forEach(course => {
-        const card = document.createElement('div');
+        const card = document.createElement('section');
         card.className = 'course-card';
         if (course.completed) card.classList.add('completed');
         
-        card.innerHTML = `<h3>${course.subject} ${course.number}</h3>`;
+        card.innerHTML = `<h2>${course.subject} ${course.number}</h2>`;
         courseList.appendChild(card);
     });
 
