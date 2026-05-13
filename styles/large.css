@@ -1,7 +1,5 @@
 @media (min-width: 768px) {
-    .hamburger-btn {
-        display: none; 
-    }
+    .hamburger-btn { display: none; }
 
     nav {
         display: flex;
@@ -11,7 +9,12 @@
         background: none;
     }
 
-    nav a {
-        border-bottom: none;
+    nav a { 
+        border-bottom: none; 
+    
+    }
+    
+    #course-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

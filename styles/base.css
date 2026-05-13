@@ -171,20 +171,3 @@ footer {
 }
 
 
-@media (min-width: 768px) {
-    .hamburger-btn { display: none; }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        position: static;
-        width: auto;
-        background: none;
-    }
-
-    nav a { border-bottom: none; }
-    
-    #course-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
