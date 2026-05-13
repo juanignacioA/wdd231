@@ -128,6 +128,13 @@ main {
     padding: 0 var(--spacing);
 }
 
+h1{
+    margin: 0;
+    border: none;
+    color: var(--primary-blue);
+    padding: 0;
+}
+
 .card-section {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -176,8 +183,6 @@ main {
     color: var(--primary-blue);
     padding: 0;
 }
-
-
 
 .course-card.completed {
     background-color: var(--completed-bg);
