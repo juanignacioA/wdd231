@@ -96,7 +96,7 @@ function displayCourses(filteredList) {
     courseList.innerHTML = "";
     
     filteredList.forEach(course => {
-        const card = document.createElement('section');
+        const card = document.createElement('div');
         card.className = 'course-card';
         if (course.completed) card.classList.add('completed');
         
