@@ -68,7 +68,7 @@ nav {
 nav.open { display: flex; }
 
 nav a {
-    color: white;
+    color: var(--accent-gray);
     text-decoration: none;
     padding: 1rem;
     border-bottom: 1px dotted rgba(255,255,255,0.2);
@@ -77,7 +77,7 @@ nav a {
 .hamburger-btn {
     background: none;
     border: none;
-    color: white; 
+    color: var(--accent-gray); 
     cursor: pointer;
     font-family: serif; 
     padding: 0.5rem;
@@ -107,7 +107,7 @@ nav a {
 .filters button {
     padding: 10px 20px;
     background-color: var(--primary-blue);
-    color: white;
+    color: var(--accent-gray);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -176,7 +176,7 @@ h1{
 
 .course-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px var(--shadow);
     border-color: var(--primary-blue);
     cursor: pointer;
 }
@@ -200,7 +200,7 @@ h1{
 footer {
     padding: 1.5rem;
     background-color: var(--primary-blue);
-    color: white;
+    color: var(--accent-gray);
     text-align: center;
     font-size: 0.85rem; 
     border-top: 3px solid var(--primary-blue-dark);
