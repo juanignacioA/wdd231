@@ -146,6 +146,7 @@ h1{
 #card-three img{
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 .card-section h2 {
