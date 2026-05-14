@@ -17,4 +17,31 @@
     #course-list {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    main {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    gap: var(--spacing);
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 var(--spacing);
+
+    }
+
+    #card-one{
+    grid-column: 1/4;
+    }
+
+    #card-two{
+        grid-column: 1/3;
+    }
+
+    #card-three{
+        grid-column: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 300PX;
+    }
+
 }
