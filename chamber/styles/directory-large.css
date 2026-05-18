@@ -1,0 +1,35 @@
+@media (min-width: 975px) {
+    .short-text {
+        display: none;
+    }
+
+    .long-text {
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        margin: 0;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    main.grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}

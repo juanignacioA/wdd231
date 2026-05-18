@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Soriano Agribusiness",
+        "addresses": "Asencio 456, Dolores, Soriano",
+        "phone": "+598 4531 1234",
+        "website": "https://sorianoagri.com",
+        "image": "soriano-agri.jpg",
+        "membershipLevel": 3,
+        "tagline": "Growing Local Economy"
+    },
+    {
+        "name": "Dolores Logistics & Retail",
+        "addresses": "Sotelo 789, Dolores, Soriano",
+        "phone": "+598 4531 5678",
+        "website": "https://doloreslogistics.com",
+        "image": "dolores-logistics.jpg",
+        "membershipLevel": 2,
+        "tagline": "Your Trusted Trade Partner"
+    },
+    {
+        "name": "Rio San Salvador Tourism",
+        "addresses": "Costanera s/n, Dolores, Soriano",
+        "phone": "+598 4531 9012",
+        "website": "https://visitdolores.com",
+        "image": "rio-san-salvador.jpg",
+        "membershipLevel": 1,
+        "tagline": "Explore Our Heritage"
+    },
+    {
+        "name": "Panadería El Trigo",
+        "addresses": "Artigas 123, Dolores, Soriano",
+        "phone": "+598 4531 2233",
+        "website": "https://eltrigopanaderia.com",
+        "image": "panaderia-trigo.jpg",
+        "membershipLevel": 1,
+        "tagline": "El sabor de nuestra tradición."
+    },
+    {
+        "name": "Dolores Software Solutions",
+        "addresses": "Elena López 845, Dolores, Soriano",
+        "phone": "+598 4531 8899",
+        "website": "https://doloressoftware.com",
+        "image": "dolores-software.jpg",
+        "membershipLevel": 3,
+        "tagline": "Innovación tecnológica local."
+    },
+    {
+        "name": "Veterinaria San Salvador",
+        "addresses": "Grito de Asencio 620, Dolores, Soriano",
+        "phone": "+598 4531 4455",
+        "website": "https://vetsansalvador.com",
+        "image": "vet-sansalvador.jpg",
+        "membershipLevel": 2,
+        "tagline": "Cuidando a tus mejores amigos."
+    },
+    {
+        "name": "Automotores del Sur",
+        "addresses": "Ruta 2 Km 240, Dolores, Soriano",
+        "phone": "+598 4531 7766",
+        "website": "https://automotoresdelsur.com",
+        "image": "automotores-sur.jpg",
+        "membershipLevel": 1,
+        "tagline": "Tu confianza sobre ruedas."
+    }
+]

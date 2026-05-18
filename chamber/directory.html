@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Chamber of Commerce Directory - Dolores, Soriano">
+    <meta property="og:description" content="Explore and connect with local businesses and organization members in our chamber directory.">
+    <meta property="og:image" content="https://juanignacioa.github.io/wdd231/images/logo-wheat.svg">
+
+    <meta name="description" content="Chamber of Commerce business directory page. View local organization profiles in grid or list layout.">
+    <meta name="author" content="Juan Ignacio Arballo">
+
+    <title>Dolores Soriano Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon-wheat.ico">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/directory-large.css">
+    <script src="scripts/directory.js" defer></script>
+
+
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/logo-wheat.svg" alt="Dolores Chamber Logo" id="logo">
+            <h1>
+                <span class="long-text">Dolo Chamber of Commerce</span>
+                <span class="short-text">Dolo C.C.</span>
+            </h1>
+        </div>
+        <button id="menu"></button>
+        <nav class="navigation">
+            <a href="#">HOME</a>
+            <a href="#">DIRECTORY</a>
+            <a href="#">JOIN</a>
+            <a href="#">DISCOVER</a>
+        </nav>
+    </header>
+
+    <div class="view-toggle">
+        <button id="gridBtn">Grid View</button>
+        <button id="listBtn">List View</button>
+    </div>
+
+    <main class="grid-view">
+
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p><strong>Dolores Soriano Chamber of Commerce</strong></p>
+            <p>Asencio Street</p>
+            <p>Dolores, Soriano, Uruguay</p>
+            <p>info@doloreschamber.org</p>
+            <p>+598 4531 0000</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icon">YouTube</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">LinkedIn</a>
+        </div>
+        <div class="footer-meta">
+            <p>&copy;<span id="currentyear"></span> Dolores Soriano Chamber of Commerce</p>
+            <p>Juan Ignacio Arballo</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
