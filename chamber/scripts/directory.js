@@ -19,7 +19,7 @@ if (lastModifiedElement) {
     lastModifiedElement.textContent = `Last Modification: ${document.lastModified}`;
 }
 
-const url = '../data/members.json';
+const url = 'data/members.json';
 const mainContainer = document.querySelector('main');
 const gridButton = document.querySelector('#gridBtn');
 const listButton = document.querySelector('#listBtn');
