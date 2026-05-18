@@ -35,6 +35,14 @@ header {
     justify-content: space-between;
 }
 
+main h1 {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--primary-green);
+    font-size: 1.8rem;
+}
+
 .logo-area {
     display: flex;
     align-items: center;
@@ -51,6 +59,19 @@ header {
 #logo {
     width: 50px;
     height: auto;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 #menu {

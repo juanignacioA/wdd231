@@ -33,6 +33,10 @@ async function getMembersData() {
 const displayMembers = (members) => {
     mainContainer.innerHTML = ""; 
 
+    let pageTitle = document.createElement('h1');
+    pageTitle.textContent = "Dolores Chamber of Commerce Business Directory";
+    mainContainer.appendChild(pageTitle);
+
     members.forEach((member) => {
         let card = document.createElement('section');
         card.classList.add('business-card');
