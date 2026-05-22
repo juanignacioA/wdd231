@@ -4,7 +4,7 @@
         "addresses": "Asencio 456, Dolores, Soriano",
         "phone": "+598 4531 1234",
         "website": "https://sorianoagri.com",
-        "image": "images/logo-wheat.webp",
+        "image": "images/member1-small.webp",
         "membershipLevel": 3,
         "tagline": "Growing the local economy."
     },
@@ -13,7 +13,7 @@
         "addresses": "Sotelo 789, Dolores, Soriano",
         "phone": "+598 4531 5678",
         "website": "https://doloreslogistics.com",
-        "image": "images/logo-wheat.webp",
+        "image": "images/member2-small.webp",
         "membershipLevel": 2,
         "tagline": "Your trusted trade partner."
     },
@@ -22,7 +22,7 @@
         "addresses": "Costanera s/n, Dolores, Soriano",
         "phone": "+598 4531 9012",
         "website": "https://visitdolores.com",
-        "image": "images/logo-wheat.webp",
+        "image": "images/member3-small.webp",
         "membershipLevel": 1,
         "tagline": "Explore our local heritage."
     },
@@ -31,7 +31,7 @@
         "addresses": "Artigas 123, Dolores, Soriano",
         "phone": "+598 4531 2233",
         "website": "https://eltrigopanaderia.com",
-        "image": "images/logo-wheat.webp",
+        "image": "images/member4-small.webp",
         "membershipLevel": 1,
         "tagline": "The authentic taste of our tradition."
     },
@@ -40,7 +40,7 @@
         "addresses": "Elena López 845, Dolores, Soriano",
         "phone": "+598 4531 8899",
         "website": "https://doloressoftware.com",
-        "image": "images/logo-wheat.webp",
+        "image": "images/member5-small.webp",
         "membershipLevel": 3,
         "tagline": "Driving local technological innovation."
     },
@@ -49,7 +49,7 @@
         "addresses": "Grito de Asencio 620, Dolores, Soriano",
         "phone": "+598 4531 4455",
         "website": "https://vetsansalvador.com",
-        "image": "images/logo-wheat.webp",
+        "image": "images/member6-small.webp",
         "membershipLevel": 2,
         "tagline": "Taking care of your best friends."
     },
@@ -58,7 +58,7 @@
         "addresses": "Ruta 2 Km 240, Dolores, Soriano",
         "phone": "+598 4531 7766",
         "website": "https://automotoresdelsur.com",
-        "image": "images/logo-wheat.webp",
+        "image": "images/member7-small.webp",
         "membershipLevel": 1,
         "tagline": "Your trust on wheels."
     }
