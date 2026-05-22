@@ -313,6 +313,13 @@ footer {
     text-decoration: none;
 }
 
+.footer-social img{
+    width: 2rem; 
+    height: 2rem; 
+    aspect-ratio: 1 / 1;
+    filter: invert(1);
+}
+
 .footer-meta {
     border-top: 1px solid var(--footer-border);
     padding-top: 1rem;
