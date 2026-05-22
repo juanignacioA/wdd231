@@ -41,7 +41,7 @@ const displayMembers = (members) => {
         phone.textContent = `PHONE: ${member.phone}`;
 
         let urlLink = document.createElement('p');
-        urlLink.innerHTML = `URL: <a href="${member.website}" target="_blank">${member.website.replace('https://', '')}</a>`;
+        urlLink.innerHTML = `URL: <a href="${member.website}" target="_blank" rel="noopener">${member.website.replace('https://', '')}</a>`;
 
         let membership = document.createElement('p');
         membership.classList.add('membership-level');
