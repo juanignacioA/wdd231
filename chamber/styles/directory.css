@@ -57,8 +57,9 @@ main h1 {
 }
 
 #logo {
-    width: 50px;
-    height: auto;
+    width: 60px;
+    height: 60px;
+    aspect-ratio: 1 / 1;
 }
 
 .logo-link {
@@ -74,6 +75,7 @@ main h1 {
     font-size: 1.2rem;
 }
 
+/* --- HAMBURGER BUTTON --- */
 #menu {
     background: none;
     border: none;
@@ -95,10 +97,11 @@ main h1 {
     content: "✕";
 }
 
+/* --- BASE NAVIGATION --- */
 .navigation {
     display: none;
     flex-direction: column;
-    background-color: rgba(10, 30, 20, 0.95);
+    background-color: rgba(10, 30, 20, 0.9);
     width: 100%;
     margin: 1rem auto 0 auto;
     border-radius: 8px;
@@ -112,6 +115,7 @@ main h1 {
 }
 
 .navigation a {
+    display: block;
     color: var(--text-light);
     padding: 1rem;
     text-decoration: none;
@@ -123,13 +127,13 @@ main h1 {
     transition: all 0.25s ease;
 }
 
-.navigation a:hover, 
-.navigation a:active {
+.navigation a:hover {
     background-color: var(--accent-green);
     color: var(--primary-green);
     font-weight: bold;
 }
 
+/* --- VIEWS AND MAIN CONTAINER --- */
 .view-toggle {
     display: flex;
     justify-content: center;
@@ -160,6 +164,7 @@ main {
     max-width: 1200px;
     box-sizing: border-box;
     margin: 0 auto;
+    min-height: 60vh;
 }
 
 main.grid-view {
@@ -182,6 +187,7 @@ main.list-view {
     display: inline;
 }
 
+/* --- DIRECTORY CARDS --- */
 .business-card {
     background-color: var(--card-bg);
     padding: var(--padding-base);
@@ -202,6 +208,82 @@ main.list-view {
     text-decoration: underline;
 }
 
+.business-card .member-logo {
+    display: block;
+    width: 100%;
+    max-width: 150px;     
+    height: 120px;         
+    margin: 0 auto 1rem auto;
+    object-fit: contain;   
+    background-color: transparent; 
+}
+
+main.list-view .member-logo {
+    display: none;
+}
+
+main.grid-view .member-logo {
+    display: block;
+}
+
+/* --- HOME PAGE CARDS --- */
+.home-cards-section {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.home-cards-section h2 {
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#featured-members-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.home-business-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    border-top: 4px solid var(--accent-green);
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+.home-business-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-green);
+    font-size: 1.2rem;
+}
+
+.home-business-card .tagline {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.home-business-card p {
+    margin: 0.4rem 0;
+}
+
+.home-business-card a {
+    color: var(--secondary-green);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.home-business-card a:hover {
+    text-decoration: underline;
+}
+
+/* --- FOOTER --- */
 footer {
     flex-shrink: 0;
     background-color: var(--primary-green);
@@ -240,4 +322,3 @@ footer {
 .footer-meta p {
     margin: 0.5rem 0;
 }
-

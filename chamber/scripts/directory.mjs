@@ -1,45 +1,31 @@
-const menuButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
+import { getMembersData } from './members.mjs';
 
-if (menuButton && navigation) {
-    menuButton.addEventListener('click', () => {
-        navigation.classList.toggle('open');
-        menuButton.classList.toggle('open');
-    });
-}
-
-const currentYearElement = document.querySelector('#currentyear');
-const lastModifiedElement = document.querySelector('#lastModified');
-
-if (currentYearElement) {
-    currentYearElement.textContent = new Date().getFullYear();
-}
-
-if (lastModifiedElement) {
-    lastModifiedElement.textContent = `Last Modification: ${document.lastModified}`;
-}
-
-const url = 'data/members.json';
 const mainContainer = document.querySelector('main');
 const gridButton = document.querySelector('#gridBtn');
 const listButton = document.querySelector('#listBtn');
 
-async function getMembersData() {
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMembers(data);
+async function initDirectory() {
+    const members = await getMembersData();
+    displayMembers(members);
 }
 
 const displayMembers = (members) => {
-    mainContainer.innerHTML = ""; 
+    const oldCards = mainContainer.querySelectorAll('.business-card');
+    oldCards.forEach(card => card.remove()); 
 
-    let pageTitle = document.createElement('h1');
-    pageTitle.textContent = "Dolores Chamber of Commerce Business Directory";
-    mainContainer.appendChild(pageTitle);
+    const fragment = document.createDocumentFragment();
 
     members.forEach((member) => {
         let card = document.createElement('section');
         card.classList.add('business-card');
+
+        let logo = document.createElement('img');
+        logo.src = member.image;
+        logo.alt = `Logo of ${member.name}`;
+        logo.classList.add('member-logo');
+        logo.setAttribute('loading', 'lazy');
+        logo.width = 150;  
+        logo.height = 120; 
 
         let name = document.createElement('h3');
         name.textContent = member.name;
@@ -62,6 +48,7 @@ const displayMembers = (members) => {
         let levelText = member.membershipLevel === 3 ? "Gold" : member.membershipLevel === 2 ? "Silver" : "Member";
         membership.textContent = `LEVEL: ${levelText}`;
 
+        card.appendChild(logo); 
         card.appendChild(name);
         card.appendChild(tagline);
         card.appendChild(email);
@@ -69,8 +56,10 @@ const displayMembers = (members) => {
         card.appendChild(urlLink);
         card.appendChild(membership);
 
-        mainContainer.appendChild(card);
+        fragment.appendChild(card);
     });
+
+    mainContainer.appendChild(fragment);
 }
 
 if (gridButton && listButton) {
@@ -86,5 +75,5 @@ if (gridButton && listButton) {
 }
 
 if (mainContainer) {
-    getMembersData();
+    initDirectory();
 }
