@@ -6,7 +6,7 @@
         "website": "https://sorianoagri.com",
         "image": "images/logo-wheat.webp",
         "membershipLevel": 3,
-        "tagline": "Growing Local Economy"
+        "tagline": "Growing the local economy."
     },
     {
         "name": "Dolores Logistics & Retail",
@@ -15,7 +15,7 @@
         "website": "https://doloreslogistics.com",
         "image": "images/logo-wheat.webp",
         "membershipLevel": 2,
-        "tagline": "Your Trusted Trade Partner"
+        "tagline": "Your trusted trade partner."
     },
     {
         "name": "Rio San Salvador Tourism",
@@ -24,7 +24,7 @@
         "website": "https://visitdolores.com",
         "image": "images/logo-wheat.webp",
         "membershipLevel": 1,
-        "tagline": "Explore Our Heritage"
+        "tagline": "Explore our local heritage."
     },
     {
         "name": "Panadería El Trigo",
@@ -33,7 +33,7 @@
         "website": "https://eltrigopanaderia.com",
         "image": "images/logo-wheat.webp",
         "membershipLevel": 1,
-        "tagline": "El sabor de nuestra tradición."
+        "tagline": "The authentic taste of our tradition."
     },
     {
         "name": "Dolores Software Solutions",
@@ -42,7 +42,7 @@
         "website": "https://doloressoftware.com",
         "image": "images/logo-wheat.webp",
         "membershipLevel": 3,
-        "tagline": "Innovación tecnológica local."
+        "tagline": "Driving local technological innovation."
     },
     {
         "name": "Veterinaria San Salvador",
@@ -51,7 +51,7 @@
         "website": "https://vetsansalvador.com",
         "image": "images/logo-wheat.webp",
         "membershipLevel": 2,
-        "tagline": "Cuidando a tus mejores amigos."
+        "tagline": "Taking care of your best friends."
     },
     {
         "name": "Automotores del Sur",
@@ -60,6 +60,6 @@
         "website": "https://automotoresdelsur.com",
         "image": "images/logo-wheat.webp",
         "membershipLevel": 1,
-        "tagline": "Tu confianza sobre ruedas."
+        "tagline": "Your trust on wheels."
     }
 ]
