@@ -76,13 +76,19 @@
     }
 
     .footer-social {
+        display: flex;
+        gap: 1rem;
         justify-content: center;
     }
 
     .footer-meta {
         border-top: none;
         padding-top: 0;
-        text-align: right;
+        text-align: center;
+    }
+
+    .footer-info{
+        text-align: center;
     }
 
 }
