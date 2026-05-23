@@ -17,6 +17,15 @@
         "membershipLevel": 2,
         "tagline": "Your trusted trade partner."
     },
+        {
+        "name": "Veterinaria San Salvador",
+        "addresses": "Grito de Asencio 620, Dolores, Soriano",
+        "phone": "+598 4531 4455",
+        "website": "https://vetsansalvador.com",
+        "image": "images/member6-small.webp",
+        "membershipLevel": 2,
+        "tagline": "Taking care of your best friends."
+    },
     {
         "name": "Rio San Salvador Tourism",
         "addresses": "Costanera s/n, Dolores, Soriano",
@@ -43,15 +52,6 @@
         "image": "images/member5-small.webp",
         "membershipLevel": 3,
         "tagline": "Driving local technological innovation."
-    },
-    {
-        "name": "Veterinaria San Salvador",
-        "addresses": "Grito de Asencio 620, Dolores, Soriano",
-        "phone": "+598 4531 4455",
-        "website": "https://vetsansalvador.com",
-        "image": "images/member6-small.webp",
-        "membershipLevel": 2,
-        "tagline": "Taking care of your best friends."
     },
     {
         "name": "Automotores del Sur",

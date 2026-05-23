@@ -8,6 +8,18 @@ if (menuButton && navigation) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
+
+    navLinks.forEach(link => {
+        // Comparamos si el href del enlace coincide con la URL actual
+        if (currentPage.includes(link.getAttribute('href'))) {
+            link.classList.add('active');
+        }
+    });
+});
+
 const currentYearElement = document.querySelector('#currentyear');
 const lastModifiedElement = document.querySelector('#lastModified');
 

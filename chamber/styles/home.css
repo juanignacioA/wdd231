@@ -1,0 +1,169 @@
+.hero-section {
+    position: relative; 
+    width: 100%;
+    height: 450px; 
+    overflow: hidden; 
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; 
+    display: block;
+}
+
+.hero-section::after {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 2;
+    pointer-events: none; 
+}
+
+.hero-btn-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    justify-content: center;
+    z-index: 3; 
+}
+
+.hero-btn-container {
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem; 
+    left: auto; 
+    display: flex;
+    justify-content: center; 
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #ffffff; 
+    color: var(--primary-green); 
+    text-decoration: none;
+    border-radius: 0.7rem;
+    border: 2px solid transparent; 
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.4s ease; 
+}
+
+.hero-btn:hover {
+    background-color: var(--accent-green); 
+    color: #ffffff; 
+    border: 2px solid var(--accent-green); 
+    box-shadow: 0 6px 20px rgba(76, 187, 23, 0.4); 
+    transform: translateY(-3px);
+}
+
+.content-wrapper { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    width: 100%; 
+    padding: 0 1rem; 
+    box-sizing: border-box; 
+}
+
+.home-grid, .spotlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 2rem 0;
+}
+
+.card {
+    background-color: var(--card-bg); 
+    padding: 2.5rem; 
+    border-radius: 12px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease; 
+    box-sizing: border-box;
+}
+
+.card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: var(--primary-green);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.event-item h3, .card h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.event-item p, .card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.forecast-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#current-weather p {
+    margin: 5px 0;
+}
+
+.member-logo {
+    display: block;
+    max-width: 90px;
+    height: auto;
+    margin: 0 auto 1.5rem;
+    object-fit: contain;
+    border-radius: 8px; 
+    transition: transform 0.3s ease;
+}
+
+.card:hover .member-logo {
+    transform: scale(1.05); 
+}
+
+.membership-level, .membership-level-text {
+    font-size: 0.9rem;
+    color: var(--accent-green);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tagline-text {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.visit-website {
+    display: inline-block;
+    color: var(--secondary-green);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.visit-website:hover {
+    color: var(--accent-green);
+    border-bottom: 2px solid var(--accent-green);
+}

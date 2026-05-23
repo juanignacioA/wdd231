@@ -1,39 +1,64 @@
-import { getMembersData } from './members.mjs';
+import { getWeatherData } from './weather.mjs';
 
-const featuredContainer = document.querySelector('#featured-members-container');
+document.addEventListener("DOMContentLoaded", () => {
 
-async function initHome() {
-    const members = await getMembersData();
-    
-    // Filtramos para mostrar solo miembros destacados (Gold=3 o Silver=2)
-    const featuredMembers = members.filter(member => member.membershipLevel >= 2);
-    
-    // Opcional: Mezclar el array para que varíen los 3 miembros que aparecen
-    const directThree = featuredMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
-    
-    displayHomeCards(directThree);
-}
+    async function loadFeaturedMembers() {
+        try {
+            const response = await fetch('data/members.json');
+            const members = await response.json();
+            
+            const featured = members.filter(m => m.membershipLevel >= 2);
+            
+            featured.sort(() => 0.5 - Math.random());
+            
+            const selected = featured.slice(0, 3);
+            
+            const container = document.querySelector('#spotlights-container');
+            container.innerHTML = selected.map(m => {
+                let levelText = m.membershipLevel === 3 ? "Gold" : 
+                                m.membershipLevel === 2 ? "Silver" : "Member";
 
-const displayHomeCards = (selectedMembers) => {
-    if (!featuredContainer) return;
-    
-    featuredContainer.innerHTML = ""; // Limpiamos solo la sección de destacados de la Home
+                return `
+                    <div class="card spotlight-card">
+                        <img src="${m.image}" alt="${m.name}" class="member-logo">
+                        <h3>${m.name}</h3>
+                        <p class="membership-level">${levelText} Member</p>
+                        <p><em>${m.tagline}</em></p>
+                        <p>${m.phone}</p>
+                        <a href="${m.website}" target="_blank">Visit Website</a>
+                    </div>
+                `;
+            }).join('');
+        } catch (error) {
+            console.error("Error loading members:", error);
+            document.querySelector('#spotlights-container').innerHTML = "<p>Could not load members.</p>";
+        }
+    }
 
-    selectedMembers.forEach(member => {
-        let card = document.createElement('div');
-        card.classList.add('home-business-card'); // Una clase CSS diferente para darles estilos más chicos
+    loadFeaturedMembers();
 
-        card.innerHTML = `
-            <h3>${member.name}</h3>
-            <p class="tagline">${member.tagline}</p>
-            <p><strong>Phone:</strong> ${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
-        `;
+    getWeatherData();
+});
+
+async function loadEvents() {
+    try {
+        const response = await fetch('data/events.json');
+        const events = await response.json();
         
-        featuredContainer.appendChild(card);
-    });
+        const container = document.querySelector('#events-container');
+        
+        const eventsHTML = events.map(event => `
+            <div class="event-item" style="margin-bottom: 1.5rem;">
+                <h3>${event.title}</h3>
+                <p><strong>${event.date}</strong></p>
+                <p>${event.description}</p>
+            </div>
+        `).join('');
+        
+        container.innerHTML = `<h2>Upcoming Events</h2>` + eventsHTML;
+    } catch (error) {
+        console.error("Error loading events:", error);
+    }
 }
 
-if (featuredContainer) {
-    initHome();
-}
+loadEvents();
