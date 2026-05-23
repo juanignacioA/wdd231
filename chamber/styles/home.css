@@ -37,14 +37,6 @@
     z-index: 3; 
 }
 
-.hero-btn-container {
-    position: absolute;
-    bottom: 2rem;
-    right: 3rem; 
-    left: auto; 
-    display: flex;
-    justify-content: center; 
-}
 
 .hero-btn {
     display: inline-block;
