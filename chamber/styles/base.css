@@ -34,6 +34,7 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    min-width: 320px;
 }
 
 .logo-area {
@@ -151,6 +152,7 @@ footer {
     gap: 1.5rem;
     text-align: center;
     width: 100%;
+    min-width: 350px;
     box-sizing: border-box;
 }
 
