@@ -6,13 +6,13 @@
 
     <meta property="og:title" content="Chamber of Commerce Directory - Dolores, Soriano">
     <meta property="og:description" content="Explore and connect with local businesses and organization members in our chamber directory.">
-    <meta property="og:image" content="https://juanignacioa.github.io/wdd231/chamber/images/logo-wheat.jpg">
+    <meta property="og:image" content="https://juanignacioa.github.io/wdd231/chamber/images/logo-wheat.webp">
     <meta property="og:url" content="https://juanignacioa.github.io/wdd231/chamber/directory.html">
 
     <meta name="description" content="Chamber of Commerce business directory page. View local organization profiles in grid or list layout.">
     <meta name="author" content="Juan Ignacio Arballo">
 
-    <title>Directory - Dolores Chamber of Commerce</title>
+    <title>Join - Dolores Chamber of Commerce</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/base-large.css">
-    <script src="scripts/main.mjs" type="module" defer></script>
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/main.mjs" type="module"></script>
+    <script src="scripts/join.mjs" type="module" defer></script>
 
 
 </head>
@@ -33,22 +35,140 @@
                 <a href="index.html" class="logo-link">
                     <img src="images/logo-wheat.svg" alt="Dolores Chamber Logo" id="logo">
                     <span class="logo-text">
-                        <span class="long-text">Dolores Chamber of Commerce</span>
-                        <span class="short-text">Dolores C.C.</span>
+                        <span class="long-text">DOLORES CHAMBER OF COMMERCE</span>
+                        <span class="short-text">DOLORES C.C.</span>
                     </span>
                 </a>
             </div>
         </div>
         <button id="menu"></button>
         <nav class="navigation">
-            <a href="index.html">HOME</a>
+            <a href="index.html" >HOME</a>
             <a href="directory.html">DIRECTORY</a>
             <a href="join.html" class="active">JOIN</a>
             <a href="discover.html">DISCOVER</a>
         </nav>
     </header>
     <main>
-        <h1>Join</h1>
+        <h1>Join - Chamber Of Commerce</h1>
+        <div class="join-container">  
+            <div class="form-wrapper">
+                <h2>Join Our Chamber</h2>
+                <form action="thankyou.html" method="get">
+                    <label>First Name:
+                        <input type="text" name="fname" title="Enter your first name" autocomplete="given-name" required>
+                    </label>
+                    <label>Last Name:
+                        <input type="text" name="lname" title="Enter your last name" autocomplete="family-name" required>
+                    </label>
+                    <label>Organizational Title:
+                        <input type="text" name="orgTitle" title="Enter your title (min 7 characters)" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}" placeholder="Min 7 characters" required>
+                    </label>
+                    <label>Email Address:
+                        <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="email@example.com" required>
+                    </label>
+                    <label>Mobile Phone Number:
+                        <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                    </label>
+                    <label>Business Name:
+                        <input type="text" name="orgName" title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+
+                    <label>Description:
+                        <textarea name="description" title="Enter a description of your business" rows="4"></textarea>
+                    </label>
+
+                    <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                    <button type="submit">Join Chamber</button>
+                </form>
+            </div>
+
+            <section id="membership-cards">
+                <div class="card">
+                    <h2>Non-Profit</h2>
+                    <a href="javascript:void(0)" onclick="document.getElementById('modal-np').showModal()">View Benefits</a>
+                </div>
+                <div class="card">
+                    <h2>Bronze</h2>
+                    <a href="javascript:void(0)" onclick="document.getElementById('modal-bronze').showModal()">View Benefits</a>
+                </div>
+                <div class="card">
+                    <h2>Silver</h2>
+                    <a href="javascript:void(0)" onclick="document.getElementById('modal-silver').showModal()">View Benefits</a>
+                </div>
+                <div class="card">
+                    <h2>Gold</h2>
+                    <a href="javascript:void(0)" onclick="document.getElementById('modal-gold').showModal()">View Benefits</a>
+                </div>
+            </section>
+
+            <dialog id="modal-np">
+                <div class="modal-content">
+                    <h3>Non-Profit Membership</h3>
+                    <p class="modal-cost"><strong>Cost:</strong> Free ($0/year)</p>
+                    <p>Designed strictly for registered non-profit organizations and community groups.</p>
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li>Basic business directory listing.</li>
+                        <li>Access to general chamber networking events.</li>
+                        <li>Community project collaboration.</li>
+                    </ul>
+                    <button class="btn-close-modal" onclick="this.closest('dialog').close()">Close</button>
+                </div>
+            </dialog>
+
+            <dialog id="modal-bronze">
+                <div class="modal-content">
+                    <h3>Bronze Membership</h3>
+                    <p class="modal-cost"><strong>Cost:</strong> $50 / year</p>
+                    <p>Ideal for small businesses and startups looking to build local connections.</p>
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li>Standard business directory listing.</li>
+                        <li>10% discount on Chamber training and workshops.</li>
+                        <li>Acknowledge in the new member newsletter.</li>
+                        <li>Access to member-only networking events.</li>
+                    </ul>
+                    <button class="btn-close-modal" onclick="this.closest('dialog').close()">Close</button>
+                </div>
+            </dialog>
+
+            <dialog id="modal-silver">
+                <div class="modal-content">
+                    <h3>Silver Membership</h3>
+                    <p class="modal-cost"><strong>Cost:</strong> $150 / year</p>
+                    <p>Perfect for growing organizations seeking higher visibility in Dolores.</p>
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li><strong>All Bronze Benefits included.</strong></li>
+                        <li>Advanced directory listing with logo and social links.</li>
+                        <li>20% discount on Chamber events and training.</li>
+                        <li>1 Spotlight position on the home page sidebar per year.</li>
+                        <li>Free access to business development seminars.</li>
+                    </ul>
+                    <button class="btn-close-modal" onclick="this.closest('dialog').close()">Close</button>
+                </div>
+            </dialog>
+
+            <dialog id="modal-gold">
+                <div class="modal-content">
+                    <h3>Gold Membership</h3>
+                    <p class="modal-cost"><strong>Cost:</strong> $300 / year</p>
+                    <p>Premium tier providing maximum exposure, elite advertising, and VIP access.</p>
+                    <h4>Benefits:</h4>
+                    <ul>
+                        <li><strong>All Silver Benefits included.</strong></li>
+                        <li>Prominent directory listing featured at the top of searches.</li>
+                        <li>30% discount on all event tickets.</li>
+                        <li>Permanent Spotlight position on the Chamber Homepage.</li>
+                        <li>VIP invitations to exclusive board-level events.</li>
+                        <li>Free booth/space during the annual Chamber Fair.</li>
+                    </ul>
+                    <button class="btn-close-modal" onclick="this.closest('dialog').close()">Close</button>
+                </div>
+            </dialog>
+        </div>
     </main>
 
     <footer>

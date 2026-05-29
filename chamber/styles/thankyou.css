@@ -1,0 +1,60 @@
+.thank-you-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 2.5rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    text-align: center;
+    border-top: 8px solid var(--primary-green);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Estilo para los resultados inyectados por JS */
+#results {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--accent-green);
+    text-align: left;
+}
+
+/* Estilo de los campos de datos */
+#results p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: var(--text-dark);
+}
+
+#results strong {
+    color: var(--primary-green);
+    text-transform: capitalize;
+}
+
+/* Ajuste de título */
+h1 {
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+
+.btn-home:hover {
+    filter: brightness(1.2); /* Esto hará que el botón brille al pasar el mouse */
+}
+
+.button-area {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--accent-green); /* Opcional: línea divisoria */
+    text-align: center;
+}
+
+.btn-home {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}

@@ -6,7 +6,7 @@
 
     <meta property="og:title" content="Chamber of Commerce Directory - Dolores, Soriano">
     <meta property="og:description" content="Explore and connect with local businesses and organization members in our chamber directory.">
-    <meta property="og:image" content="https://juanignacioa.github.io/wdd231/chamber/images/logo-wheat.jpg">
+    <meta property="og:image" content="https://juanignacioa.github.io/wdd231/chamber/images/logo-wheat.webp">
     <meta property="og:url" content="https://juanignacioa.github.io/wdd231/chamber/directory.html">
 
     <meta name="description" content="Chamber of Commerce business directory page. View local organization profiles in grid or list layout.">
@@ -22,11 +22,9 @@
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/base-large.css">
-    <link rel="stylesheet" href="styles/directory.css">
-    <link rel="stylesheet" href="styles/directory-large.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
     <script src="scripts/main.mjs" type="module"></script>
-    <script src="scripts/directory.mjs" type="module" defer></script>
-
+    <script src="scripts/join.mjs" type="module" defer></script>
 
 </head>
 <body>
@@ -34,7 +32,7 @@
         <div class="logo-area">
             <div class="logo-area">
                 <a href="index.html" class="logo-link">
-                    <img src="images/logo-wheat.svg" alt="Dolores Chamber Logo" aria-label="Go to Dolores Chamber of Commerce home page" id="logo">
+                    <img src="images/logo-wheat.svg" alt="Dolores Chamber Logo" id="logo">
                     <span class="logo-text">
                         <span class="long-text">DOLORES CHAMBER OF COMMERCE</span>
                         <span class="short-text">DOLORES C.C.</span>
@@ -42,22 +40,25 @@
                 </a>
             </div>
         </div>
-        <button id="menu" aria-label="Open Hamburger Menu"></button>
+        <button id="menu"></button>
         <nav class="navigation">
-            <a href="index.html">HOME</a>
-            <a href="directory.html" class="active">DIRECTORY</a>
+            <a href="index.html" class="active">HOME</a>
+            <a href="directory.html">DIRECTORY</a>
             <a href="join.html">JOIN</a>
             <a href="discover.html">DISCOVER</a>
         </nav>
     </header>
+    <main>
+        <div class="thank-you-container">
+            <h1>Thank You!</h1>
+            <p>Your application has been submitted successfully.</p>
+            
+            <div id="results"></div>
 
-    <div class="view-toggle">
-        <button id="gridBtn" aria-label="Switch to Grid View">Grid View</button>
-        <button id="listBtn" aria-label="Switch to List View">List View</button>
-    </div>
-
-    <main class="grid-view">
-        <h1>Directory - Dolores Chamber of Commerce</h1>
+            <div class="button-area">
+            <a href="index.html" class="btn-home">Return Home</a>
+            </div>
+        </div>
     </main>
 
     <footer>

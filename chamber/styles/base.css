@@ -35,6 +35,9 @@ header {
     align-items: center;
     justify-content: space-between;
     min-width: 320px;
+    /* Efecto moderno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid var(--footer-border);
 }
 
 .logo-area {
@@ -50,27 +53,43 @@ header {
     border-radius: 0rem 1rem 1rem 0rem;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem; /* Espacio aumentado para dar respiro al nuevo logo */
+    text-decoration: none; 
+    color: inherit; 
+    /* Animación moderna */
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: translateY(-2px);
+}
+
 #logo {
     width: 60px;
     height: 60px;
     aspect-ratio: 1 / 1;
-}
-
-.logo-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none; 
-    color: inherit; 
+    /* Insignia flotante */
+    background-color: var(--card-bg); /* Usando tu variable de fondo blanco */
+    padding: 8px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .logo-text {
     font-weight: bold;
     font-size: 1.2rem;
+    /* Tipografía premium */
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .long-text {
-    display: none;
+    display: none; /* Intacto para que no se rompa la versión móvil */
 }
 
 #menu {
@@ -104,6 +123,7 @@ header {
     padding: 0.5rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    transform-origin: top center; 
 }
 
 .navigation.open {
@@ -120,19 +140,36 @@ header {
     font-size: 1.1rem;
     letter-spacing: 1px;
     border-radius: 6px;
-    transition: all 0.25s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .navigation a:hover {
     background-color: var(--accent-green);
     color: var(--primary-green);
-    font-weight: bold;
+    /* Eliminamos el font-weight: bold de aquí para evitar el salto */
+    transform: translateY(-2px); /* Agregamos un pequeñísimo y suave salto hacia arriba */
 }
 
 nav a.active {
-        font-weight: bold;
-        color: var(--accent-green);
-        background-color: transparent;
+    font-weight: bold; /* Aquí sí está perfecto dejarlo, porque indica la página actual y no cambia con el mouse */
+    color: var(--accent-green);
+    background-color: transparent;
+}
+
+.navigation.open {
+    display: flex;
+    animation: menuSlideFade 0.35s ease-out forwards;
+}
+
+@keyframes menuSlideFade {
+    from {
+        opacity: 0;
+        transform: translateY(-15px) scaleY(0.95); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scaleY(1); 
+    }
 }
 
 /* Main Wrapper */
