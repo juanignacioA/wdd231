@@ -66,11 +66,15 @@ if (gridButton && listButton) {
     gridButton.addEventListener('click', () => {
         mainContainer.classList.add('grid-view');
         mainContainer.classList.remove('list-view');
+        gridButton.classList.add('active');
+        listButton.classList.remove('active');
     });
 
     listButton.addEventListener('click', () => {
         mainContainer.classList.add('list-view');
         mainContainer.classList.remove('grid-view');
+        listButton.classList.add('active');
+        gridButton.classList.remove('active');
     });
 }
 

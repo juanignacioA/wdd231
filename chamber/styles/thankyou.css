@@ -10,7 +10,6 @@
     animation: fadeInUp 0.8s ease-out;
 }
 
-/* Estilo para los resultados inyectados por JS */
 #results {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -18,7 +17,6 @@
     text-align: left;
 }
 
-/* Estilo de los campos de datos */
 #results p {
     font-size: 1rem;
     margin: 0.5rem 0;
@@ -30,7 +28,6 @@
     text-transform: capitalize;
 }
 
-/* Ajuste de título */
 h1 {
     color: var(--primary-green);
     margin-bottom: 1rem;
@@ -38,13 +35,13 @@ h1 {
 
 
 .btn-home:hover {
-    filter: brightness(1.2); /* Esto hará que el botón brille al pasar el mouse */
+    filter: brightness(1.2);
 }
 
 .button-area {
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--accent-green); /* Opcional: línea divisoria */
+    border-top: 1px solid var(--accent-green); 
     text-align: center;
 }
 

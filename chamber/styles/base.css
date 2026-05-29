@@ -35,7 +35,6 @@ header {
     align-items: center;
     justify-content: space-between;
     min-width: 320px;
-    /* Efecto moderno */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     border-bottom: 1px solid var(--footer-border);
 }
@@ -56,10 +55,9 @@ header {
 .logo-link {
     display: flex;
     align-items: center;
-    gap: 1.2rem; /* Espacio aumentado para dar respiro al nuevo logo */
+    gap: 1.2rem; 
     text-decoration: none; 
     color: inherit; 
-    /* Animación moderna */
     transition: transform 0.3s ease;
 }
 
@@ -71,8 +69,7 @@ header {
     width: 60px;
     height: 60px;
     aspect-ratio: 1 / 1;
-    /* Insignia flotante */
-    background-color: var(--card-bg); /* Usando tu variable de fondo blanco */
+    background-color: var(--card-bg);
     padding: 8px;
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -81,7 +78,6 @@ header {
 .logo-text {
     font-weight: bold;
     font-size: 1.2rem;
-    /* Tipografía premium */
     display: flex;
     flex-direction: column;
     letter-spacing: 1.5px;
@@ -89,7 +85,7 @@ header {
 }
 
 .long-text {
-    display: none; /* Intacto para que no se rompa la versión móvil */
+    display: none;
 }
 
 #menu {
@@ -146,12 +142,11 @@ header {
 .navigation a:hover {
     background-color: var(--accent-green);
     color: var(--primary-green);
-    /* Eliminamos el font-weight: bold de aquí para evitar el salto */
-    transform: translateY(-2px); /* Agregamos un pequeñísimo y suave salto hacia arriba */
+    transform: translateY(-2px); 
 }
 
 nav a.active {
-    font-weight: bold; /* Aquí sí está perfecto dejarlo, porque indica la página actual y no cambia con el mouse */
+    font-weight: bold; 
     color: var(--accent-green);
     background-color: transparent;
 }

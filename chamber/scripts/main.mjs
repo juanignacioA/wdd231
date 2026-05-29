@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('nav a');
 
     navLinks.forEach(link => {
-        // Comparamos si el href del enlace coincide con la URL actual
         if (currentPage.includes(link.getAttribute('href'))) {
             link.classList.add('active');
         }
