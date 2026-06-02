@@ -38,7 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 htmlContent += `<p><strong>${formattedKey}:</strong> ${value}</p>`;
             });
 
+            
+
             resultsContainer.innerHTML = htmlContent;
         }
     }
+
+    const closeButtons = document.querySelectorAll(".btn-close-modal");
+
+    closeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            button.closest("dialog").close();
+        });
+});
 });

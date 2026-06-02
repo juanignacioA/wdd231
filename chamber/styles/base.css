@@ -124,6 +124,7 @@ header {
 
 .navigation.open {
     display: flex;
+    animation: menuSlideFade 0.35s ease-out forwards;
 }
 
 .navigation a {
@@ -151,10 +152,6 @@ nav a.active {
     background-color: transparent;
 }
 
-.navigation.open {
-    display: flex;
-    animation: menuSlideFade 0.35s ease-out forwards;
-}
 
 @keyframes menuSlideFade {
     from {
