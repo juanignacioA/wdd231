@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="styles/base-large.css">
     <link rel="stylesheet" href="styles/join.css">
     <script src="scripts/main.mjs" type="module"></script>
-    <script src="scripts/join.mjs" type="module" defer></script>
+    <script src="scripts/join.mjs" type="module"></script>
 
 
 </head>
@@ -73,13 +73,20 @@
                     <label>Business Name:
                         <input type="text" name="orgName" title="Enter your business or organization name" autocomplete="organization" required>
                     </label>
-
+                    <label>Membership Level:
+                        <select id="membership" name="membership" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="np">Non-Profit</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </label>
                     <label>Description:
                         <textarea name="description" title="Enter a description of your business" rows="4"></textarea>
                     </label>
 
                     <input type="hidden" id="timestamp" name="timestamp" value="">
-
                     <button type="submit">Join Chamber</button>
                 </form>
             </div>
@@ -87,19 +94,19 @@
             <section id="membership-cards">
                 <div class="card">
                     <h2>Non-Profit</h2>
-                    <a href="javascript:void(0)" onclick="document.getElementById('modal-np').showModal()">View Benefits</a>
+                    <button type="button" class="benefit-btn" data-modal="modal-np">View Benefits</button>
                 </div>
                 <div class="card">
                     <h2>Bronze</h2>
-                    <a href="javascript:void(0)" onclick="document.getElementById('modal-bronze').showModal()">View Benefits</a>
+                    <button type="button" class="benefit-btn" data-modal="modal-bronze">View Benefits</button>
                 </div>
                 <div class="card">
                     <h2>Silver</h2>
-                    <a href="javascript:void(0)" onclick="document.getElementById('modal-silver').showModal()">View Benefits</a>
+                    <button type="button" class="benefit-btn" data-modal="modal-silver">View Benefits</button>
                 </div>
                 <div class="card">
                     <h2>Gold</h2>
-                    <a href="javascript:void(0)" onclick="document.getElementById('modal-gold').showModal()">View Benefits</a>
+                    <button type="button" class="benefit-btn" data-modal="modal-gold">View Benefits</button>
                 </div>
             </section>
 

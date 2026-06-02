@@ -1,5 +1,5 @@
 
-h1{
+h1 {
     margin: 2rem;
 }
 
@@ -34,9 +34,11 @@ label {
     gap: 0.5rem;
 }
 
+/* Se añade 'select' para heredar los mismos estilos de formulario */
 input[type="text"], 
 input[type="email"], 
 input[type="tel"], 
+select, 
 textarea {
     padding: 12px;
     border: 1px solid var(--accent-green);
@@ -45,6 +47,8 @@ textarea {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     box-sizing: border-box;
+    background-color: var(--card-bg);
+    color: var(--text-dark);
 }
 
 fieldset {
@@ -73,7 +77,7 @@ button[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
-
+/* --- SECCIÓN TARJETAS DE MEMBRESÍA --- */
 #membership-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -93,7 +97,7 @@ button[type="submit"]:hover {
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: cardLoadEffect 0.6s ease-out ;
+    animation: cardLoadEffect 0.6s ease-out;
 }
 
 .card:hover {
@@ -107,13 +111,25 @@ button[type="submit"]:hover {
     font-size: 1.4rem;
 }
 
-.card a {
+/* NUEVO: Estilos asignados a los nuevos botones de beneficios */
+.benefit-btn {
+    background: none;
+    border: none;
     color: var(--secondary-green);
     font-weight: 600;
-    text-decoration: none;
     font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: color 0.3s ease;
 }
 
+.benefit-btn:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+/* --- ANIMACIONES --- */
 @keyframes cardLoadEffect {
     from {
         opacity: 0;
@@ -130,21 +146,7 @@ button[type="submit"]:hover {
 .card:nth-child(3) { animation-delay: 0.3s; }
 .card:nth-child(4) { animation-delay: 0.4s; }
 
-
-@media (min-width: 1024px) { 
-    .join-container {
-        display: grid;
-        grid-template-columns: 2fr 1fr; 
-        align-items: start;
-        gap: 30px;
-    }
-
-    #membership-cards {
-        grid-template-columns: 1fr;
-    }
-}
-
-
+/* --- VENTANAS MODALES (DIALOG) --- */
 dialog {
     border: none;
     border-radius: 12px;
@@ -199,8 +201,9 @@ dialog::backdrop {
     line-height: 1.4;
 }
 
+/* Corregido a #bd2130 (Rojo oscuro) para superar exitosamente la prueba de contraste */
 .btn-close-modal {
-    background-color: #d9534f; 
+    background-color: #bd2130; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -212,5 +215,19 @@ dialog::backdrop {
 }
 
 .btn-close-modal:hover {
-    background-color: #c9302c;
+    background-color: #9c1c26;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (min-width: 1024px) { 
+    .join-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr; 
+        align-items: start;
+        gap: 30px;
+    }
+
+    #membership-cards {
+        grid-template-columns: 1fr;
+    }
 }

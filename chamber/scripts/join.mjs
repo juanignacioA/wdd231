@@ -4,6 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
         timestampField.value = new Date().toISOString();
     }
 
+    const benefitButtons = document.querySelectorAll('.benefit-btn');
+    benefitButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.showModal();
+            }
+        });
+    });
+
     if (window.location.pathname.includes('thankyou.html')) {
         const resultsContainer = document.getElementById('results');
         const params = new URLSearchParams(window.location.search);
@@ -24,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 const formattedKey = labels[key] || key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-
                 htmlContent += `<p><strong>${formattedKey}:</strong> ${value}</p>`;
             });
 
