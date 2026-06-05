@@ -34,7 +34,6 @@ label {
     gap: 0.5rem;
 }
 
-/* Se añade 'select' para heredar los mismos estilos de formulario */
 input[type="text"], 
 input[type="email"], 
 input[type="tel"], 
@@ -111,7 +110,6 @@ button[type="submit"]:hover {
     font-size: 1.4rem;
 }
 
-/* NUEVO: Estilos asignados a los nuevos botones de beneficios */
 .benefit-btn {
     background: none;
     border: none;
@@ -201,7 +199,6 @@ dialog::backdrop {
     line-height: 1.4;
 }
 
-/* Corregido a #bd2130 (Rojo oscuro) para superar exitosamente la prueba de contraste */
 .btn-close-modal {
     background-color: #bd2130; 
     color: white;
