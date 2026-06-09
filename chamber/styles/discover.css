@@ -1,0 +1,141 @@
+:root {
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --card-hover: 0 12px 20px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+}
+
+h1{
+    text-align: center;
+    padding: 1.2rem;
+    
+    margin: 1.5rem auto; 
+}
+
+.visitor-box {
+    background-color: var(--accent-green);
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    margin: 1.5rem auto; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: transform 0.5s ease;
+}
+
+.visitor-box:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-hover);
+}
+
+.grid-container {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+}
+
+
+.card {
+    background: #ffffff;
+    border-radius: 15px; 
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-hover);
+}
+
+.card figure {
+    margin: 0;
+    height: 200px; 
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+    aspect-ratio: 3 / 2;
+}
+
+.card:hover img {
+    transform: scale(1.1); 
+}
+
+
+.card h2 {
+    padding: 1rem 1rem 0;
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--primary-green);
+}
+
+.card address {
+    padding: 0.5rem 1rem;
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.card p {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    flex-grow: 1; 
+}
+
+
+.card button {
+    margin: 1rem;
+    padding: 0.8rem;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.card button:hover {
+    background-color: var(--accent-green);
+    color: var(--primary-green);
+}
+
+
+@media (min-width: 641px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1025px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .card img:hover {
+        transform: scale(1.05);
+        filter: grayscale(0%);
+        transition: 0.3s;
+    }
+    
+    .card img {
+        filter: grayscale(50%);
+        transition: 0.3s;
+    }
+}
