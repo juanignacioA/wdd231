@@ -1,9 +1,3 @@
-:root {
-    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --card-hover: 0 12px 20px rgba(0, 0, 0, 0.2);
-    --transition: all 0.3s ease;
-}
-
 h1{
     text-align: center;
     padding: 1.2rem;
@@ -25,7 +19,7 @@ h1{
 
 .visitor-box:hover {
     transform: translateY(-8px);
-    box-shadow: var(--card-hover);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 .grid-container {
@@ -39,16 +33,16 @@ h1{
 .card {
     background: #ffffff;
     border-radius: 15px; 
-    box-shadow: var(--card-shadow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--card-hover);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card figure {
