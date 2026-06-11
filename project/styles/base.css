@@ -1,0 +1,343 @@
+
+:root {
+    /* Main Palette */
+    --bg-main: #ECF0F1;       /* Siteplan Background */
+    --surface: #ffffff;       /* Pure white for cards */
+    --text-main: #2C3E50;     /* Siteplan Primary (Dark Blue/Slate) */
+    --text-muted: #34495E;    /* Siteplan Primary Light */
+    --accent: #18BC9C;        /* Siteplan Secondary (Teal/Green) */
+    --accent-hover: #128f76;  /* Darker shade for hover states */
+    --border-color: #d5dbdb;  /* Soft border matching the background */
+    
+    /* State Colors for Habit Tracking */
+    --success: #2ECC71;
+    --warning: #F39C12;
+    --danger: #E74C3C;
+
+    /* Shadows & Radii */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-pill: 9999px;
+}
+
+body {
+    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Clean, Button-less Header --- */
+header {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.header-inner h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+#menu {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Mobile Nav */
+.navigation {
+    display: none;
+    flex-direction: column;
+    background-color: var(--surface);
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.navigation a:hover, .navigation a.active {
+    color: var(--accent);
+    padding-left: 2rem; /* Slide effect on mobile hover */
+}
+
+/* --- Main Layout & Hero --- */
+main {
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+}
+
+/* --- Modern Dashboard Cards --- */
+.filters {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filters button {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--radius-pill);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filters button:hover, .filters button:focus {
+    background-color: var(--text-main);
+    color: var(--surface);
+    border-color: var(--text-main);
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.habit-card {
+    background-color: var(--surface);
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.habit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Modern Badges (Pills) */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-pill);
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.habit-card p.desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.difficulty {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.difficulty.easy { color: var(--success); }
+.difficulty.medium { color: var(--warning); }
+.difficulty.hard { color: var(--danger); }
+
+button.details-btn, .cta-button, button[type="submit"] {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button.details-btn:hover, .cta-button:hover, button[type="submit"]:hover {
+    background-color: var(--accent-hover);
+}
+
+/* --- Modern Forms --- */
+.habit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    background-color: var(--surface);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin: 0 auto;
+    border: 1px solid var(--border-color);
+}
+
+.habit-form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.habit-form input[type="text"],
+.habit-form select,
+.habit-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-main);
+    font-family: inherit;
+    transition: border-color 0.2s ease, outline 0.2s ease;
+    box-sizing: border-box;
+}
+
+.habit-form input:focus, .habit-form select:focus, .habit-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.habit-form fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-main);
+}
+
+/* Modal Dialog */
+dialog {
+    border: none;
+    border-radius: var(--radius-lg); /* Usa tu variable de radio */
+    padding: 2rem;
+    box-shadow: var(--shadow-lg); /* Usa tu variable de sombra */
+    max-width: 450px;
+    width: 90%; /* Responsivo: 90% del ancho en móviles */
+    margin: auto; /* Esto es clave para centrarlo perfectamente */
+    background-color: var(--surface);
+    /* Aseguramos que esté por encima de todo */
+    z-index: 1000;
+}
+
+/* El fondo oscuro (backdrop) */
+dialog::backdrop {
+    background-color: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(4px); /* Efecto moderno de desenfoque */
+}
+
+/* Aseguramos que el contenido dentro no se deforme */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#close-modal {
+    margin-top: 1rem;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}
+
+#close-modal:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}

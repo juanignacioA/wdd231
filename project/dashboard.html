@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Habit Flow helps you track your daily routines and build a better life through consistent actions.">
+    <meta name="author" content="Juan Ignacio Arballo">
+    
+    <meta property="og:title" content="Habit Flow - Track Your Habits - Dashboard">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.webp">
+    <meta property="og:url" content="https://yourgithub.github.io/wdd231/project/dashboard.html">
+    
+    <title>Habit Flow | Home</title>
+    <link rel="icon" href="images/favicon-siteplan.ico">
+    
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/dashboard.mjs"></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1>Habit Flow</h1>
+            <button id="menu" aria-label="Open Menu">&#9776;</button>
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="myhabits.html">My Habits</a>
+            <a href="add-habit.html">Add Habit</a>
+        </nav>
+    </header>
+
+<main>
+        <h2>Habit Dashboard</h2>
+        <div class="filters">
+            <button id="filter-all">All</button>
+            <button id="filter-health">Health</button>
+            <button id="filter-mind">Mind</button>
+        </div>
+        
+        <div id="habit-container" class="grid-layout"></div>
+
+        <dialog id="habit-modal">
+            <div class="modal-content">
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+                <p><strong>Difficulty:</strong> <span id="modal-diff"></span></p>
+                <button id="close-modal">Close</button>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Habit Flow | <a href="attributions.html">Attributions</a></p>
+        <p id="lastModified"></p>
+        <p><a href="https://youtube.com/your-video-link" target="_blank">Project Video Demonstration</a></p>
+    </footer>
+    
+    <script type="module" src="scripts/main.mjs"></script>
+</body>
+</html>

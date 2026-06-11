@@ -1,0 +1,17 @@
+[
+  {"id": 1, "title": "Morning Hydration", "category": "Health", "description": "Drink 500ml of water right after waking up.", "difficulty": "Easy"},
+  {"id": 2, "title": "Read 10 Pages", "category": "Mind", "description": "Read a non-fiction or personal development book.", "difficulty": "Medium"},
+  {"id": 3, "title": "Code for 1 Hour", "category": "Career", "description": "Practice JavaScript or learn a new framework.", "difficulty": "Hard"},
+  {"id": 4, "title": "Daily Walk", "category": "Health", "description": "Walk outside for at least 20 minutes.", "difficulty": "Easy"},
+  {"id": 5, "title": "Meditation", "category": "Mind", "description": "Sit in silence and focus on your breath for 10 minutes.", "difficulty": "Medium"},
+  {"id": 6, "title": "Journaling", "category": "Mind", "description": "Write down 3 things you are grateful for.", "difficulty": "Easy"},
+  {"id": 7, "title": "Stretching", "category": "Health", "description": "Do a full-body stretching routine.", "difficulty": "Medium"},
+  {"id": 8, "title": "Zero Screen Time", "category": "Mind", "description": "No screens 1 hour before going to bed.", "difficulty": "Hard"},
+  {"id": 9, "title": "Review Finances", "category": "Finance", "description": "Log your daily expenses and check your budget.", "difficulty": "Medium"},
+  {"id": 10, "title": "Learn a Word", "category": "Mind", "description": "Learn a new word in English and use it in a sentence.", "difficulty": "Easy"},
+  {"id": 11, "title": "Healthy Meal", "category": "Health", "description": "Cook at least one full meal with whole ingredients.", "difficulty": "Hard"},
+  {"id": 12, "title": "Connect", "category": "Social", "description": "Text or call a family member or friend.", "difficulty": "Easy"},
+  {"id": 13, "title": "Declutter", "category": "Environment", "description": "Spend 15 minutes organizing your workspace.", "difficulty": "Medium"},
+  {"id": 14, "title": "Listen to a Podcast", "category": "Mind", "description": "Listen to an educational or tech podcast.", "difficulty": "Easy"},
+  {"id": 15, "title": "Plan Tomorrow", "category": "Productivity", "description": "Write down your top 3 tasks for the next day.", "difficulty": "Medium"}
+]

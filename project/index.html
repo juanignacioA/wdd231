@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Habit Flow helps you track your daily routines and build a better life through consistent actions.">
+    <meta name="author" content="Juan Ignacio Arballo">
+    
+    <meta property="og:title" content="Habit Flow - Track Your Habits">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.webp">
+    <meta property="og:url" content="https://yourgithub.github.io/wdd231/project/">
+    
+    <title>Habit Flow | Home</title>
+    <link rel="icon" href="images/favicon-siteplan.ico">
+    
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1>Habit Flow</h1>
+            <button id="menu" aria-label="Open Menu">&#9776;</button>
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="myhabits.html">My Habits</a>
+            <a href="add-habit.html">Add Habit</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Build Habits That Stick</h2>
+            <p>Your journey to a more productive life starts here.</p>
+            <img src="images/hero.webp" alt="Person organizing their daily tasks" loading="lazy" width="800" height="400">
+            <a href="dashboard.html" class="cta-button">View Habit Library</a>
+        </section>
+        <section class="intro">
+            <h3>Why Habit Flow?</h3>
+            <p>We believe in the power of small, consistent changes. Small daily improvements lead to massive results over time.</p>
+            <div id="visit-message"></div> </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Habit Flow | <a href="attributions.html" target="_blank">Attributions</a></p>
+        <p id="lastModified"></p>
+        <p><a href="https://youtube.com/your-video-link" target="_blank">Project Video Demonstration</a></p>
+    </footer>
+    
+    <script type="module" src="scripts/main.mjs"></script>
+</body>
+</html>

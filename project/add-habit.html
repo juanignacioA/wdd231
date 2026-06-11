@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ready to build a new routine? Fill out this form to add a new habit to your Habit Flow tracker. Categorize it and start measuring your success!">
+    <meta name="author" content="Juan Ignásio Arballo">
+
+    <meta property="og:title" content="Habit Flow - Track Your Habits - Add Habit">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.webp">
+    <meta property="og:url" content="https://yourgithub.github.io/wdd231/project/add-habit.html">
+    
+    <title>Habit Flow | Add Habit</title>
+    <link rel="icon" href="images/favicon-siteplan.ico">
+    
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/form.mjs"></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1>Habit Flow</h1>
+            <button id="menu" aria-label="Open Menu">&#9776;</button>
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="myhabits.html">My Habits</a>
+            <a href="add-habit.html">Add Habit</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Add a New Habit</h2>
+        <form action="success.html" method="GET" class="habit-form">
+            
+            <label for="habit-name">Habit Name *
+                <input type="text" id="habit-name" name="habitName" required>
+            </label>
+
+            <label for="category">Category *
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="Health">Health</option>
+                    <option value="Mind">Mind</option>
+                    <option value="Career">Career</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Social">Social</option>
+                    <option value="Productivity">Productivity</option>
+                </select>
+            </label>
+
+            <fieldset>
+                <legend>Difficulty *</legend>
+                <label><input type="radio" name="difficulty" value="Easy" required> Easy</label>
+                <label><input type="radio" name="difficulty" value="Medium"> Medium</label>
+                <label><input type="radio" name="difficulty" value="Hard"> Hard</label>
+            </fieldset>
+
+            <label for="description">Description
+                <textarea id="description" name="description" rows="4"></textarea>
+            </label>
+
+            <button type="submit">Save Habit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Habit Flow | <a href="attributions.html">Attributions</a></p>
+        <p id="lastModified"></p>
+        <p><a href="https://youtube.com/your-video-link" target="_blank">Project Video Demonstration</a></p>
+    </footer>
+    
+    <script type="module" src="scripts/main.mjs"></script>
+</body>
+</html>

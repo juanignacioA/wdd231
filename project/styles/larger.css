@@ -1,0 +1,80 @@
+@media (min-width: 768px) {
+    /* Ocultar botón hamburguesa en escritorio */
+    #menu {
+        display: none;
+    }
+    
+    /* 1. Transformamos el header en una columna */
+    header {
+        display: flex;
+        flex-direction: column; /* Apila el título arriba y el nav abajo */
+        align-items: center;    /* Centra el contenido horizontalmente */
+        padding: 1.5rem 2rem;
+    }
+
+    /* 2. Ajuste del contenedor del título */
+    .header-inner {
+        padding: 0;
+        margin-bottom: 1.2rem; /* Espacio entre "Habit Flow" y los links */
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centra el título. Si lo quieres a la izquierda, cambia esto a 'flex-start' */
+    }
+
+    .header-inner h1 {
+        font-size: 2.2rem; /* Título un poco más grande para que destaque */
+    }
+
+    /* 3. Navegación elegante centrada abajo */
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Centra los enlaces perfectamente en el medio */
+        width: 100%;
+        gap: 3rem; /* Espacio generoso entre cada link */
+        background: transparent;
+    }
+
+    /* Estilos de los links limpios (sin botones) */
+    .navigation a {
+        border: none;
+        padding: 0.5rem 0;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        position: relative;
+    }
+
+    /* Animación moderna de línea debajo del texto */
+    .navigation a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--accent); /* Usa tu verde turquesa */
+        transition: width 0.3s ease;
+    }
+
+    .navigation a:hover {
+        color: var(--text-main);
+        padding-left: 0; /* Anula el efecto del CSS móvil */
+        
+    }
+
+    /* La línea crece al pasar el ratón o en la página activa */
+    .navigation a:hover::after, .navigation a.active::after {
+        width: 100%;
+    }
+
+    .navigation a.active {
+        color: var(--text-main);
+        padding: 0.5rem 0;
+    }
+
+    /* --- Aquí debajo dejas el resto de tu código (Grid Layout, etc.) --- */
+    .grid-layout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

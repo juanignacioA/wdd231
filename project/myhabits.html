@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your personalized saved habits.">
+    <meta name="author" content="Juan Ignacio Arballo">
+
+    <meta property="og:title" content="Habit Flow - Track Your Habits - My Habits">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.webp">
+    <meta property="og:url" content="https://yourgithub.github.io/wdd231/project/myhabits.html">
+
+    <title>My Habits | Habit Flow</title>
+    <link rel="icon" href="images/favicon-siteplan.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/form.mjs"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1>Habit Flow</h1>
+            <button id="menu" aria-label="Open Menu">☰</button>
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="myhabits.html" class="active">My Habits</a>
+            <a href="add-habit.html">Add Habit</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>My Saved Habits</h2>
+            <p>Here is the list of habits you've customized.</p>
+        </section>
+
+        <div id="my-habits-container" class="grid-layout">
+            </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Habit Flow | <a href="attributions.html">Attributions</a></p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/myhabits.mjs"></script>
+</body>
+</html>
